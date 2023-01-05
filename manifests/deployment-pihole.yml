@@ -51,18 +51,21 @@ spec:
         terminationMessagePolicy: File
         volumeMounts:
         - mountPath: /etc/pihole
-          name: config
+          name: etc
+        - mountPath: /etc/dnsmasq.d
+          name: dnsmasq
       dnsPolicy: ClusterFirst
       restartPolicy: Always
       schedulerName: default-scheduler
       securityContext: {}
       terminationGracePeriodSeconds: 30
       volumes:
-      - name: config
-        persistentVolumeClaim:
-          claimName: pihole-config
-      - configMap:
-          defaultMode: 420
-          name: pihole-custom-dnsmasq
-        name: custom-dnsmasq
+      - name: etc
+        hostPath:
+          path: /data/pihole/etc
+          type: Directory
+      - name: dnsmasq
+        hostPath:
+          path: /data/pihole/dnsmasq.d
+          type: Directory
 status: {}

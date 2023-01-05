@@ -3,11 +3,11 @@ data:
   config: |
     address-pools:
     - addresses:
-      - 192.168.161.204-192.168.161.214
+      - 192.168.0.1-192.168.0.125
       name: default
       protocol: layer2
     - addresses:
-      - 192.168.161.215-192.168.161.224
+      - 192.168.0.126-192.168.0.127
       name: network-services
       protocol: layer2
 kind: ConfigMap

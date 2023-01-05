@@ -4,6 +4,7 @@ metadata:
   labels:
     app: pihole
   name: pihole
+  namespace: pihole
 spec:
   progressDeadlineSeconds: 600
   replicas: 1

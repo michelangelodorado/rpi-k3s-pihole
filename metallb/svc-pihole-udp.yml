@@ -7,7 +7,7 @@ metadata:
   labels:
     app: pihole
   name: pihole-udp
-  namespace: default
+  namespace: pihole
 spec:
   externalTrafficPolicy: Local
   loadBalancerIP: 192.168.161.104

@@ -7,7 +7,7 @@ metadata:
   labels:
     app: pihole
   name: pihole-tcp
-  namespace: default
+  namespace: pihole
 spec:
   externalTrafficPolicy: Local
   ports:

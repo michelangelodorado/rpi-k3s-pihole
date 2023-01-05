@@ -52,9 +52,6 @@ spec:
         volumeMounts:
         - mountPath: /etc/pihole
           name: config
-        - mountPath: /etc/dnsmasq.d/02-custom.conf
-          name: custom-dnsmasq
-          subPath: 02-custom.conf
       dnsPolicy: ClusterFirst
       restartPolicy: Always
       schedulerName: default-scheduler
